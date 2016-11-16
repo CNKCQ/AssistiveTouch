@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         assistiveTouch.setImage(UIImage(named: "AsstisTouch"), for: .normal)
         view.addSubview(assistiveTouch)
     }
-        
+    
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds

@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/CNKCQ/AssistiveTouch.git"
-  s.screenshots  = "http://7xslr9.com1.z0.glb.clouddn.com/AssistiveTouch.gif"
+  s.screenshots  = "https://cloud.githubusercontent.com/assets/8440220/20342636/3aa082d8-ac26-11e6-9e37-e5a65fe65563.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
