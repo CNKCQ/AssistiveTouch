@@ -8,26 +8,26 @@
 
 import UIKit
 
-class AssistiveTouch: UIButton {
+open class AssistiveTouch: UIButton {
     var originPoint = CGPoint.zero
     let screen = UIScreen.main.bounds
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else {
             fatalError("touch can not be nil")
         }
         originPoint = touch.location(in: self)
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else {
             fatalError("touch can not be nil")
         }
@@ -37,11 +37,11 @@ class AssistiveTouch: UIButton {
         self.center = CGPoint(x: self.center.x + offsetX, y: self.center.y + offsetY)
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         reactBounds(touches: touches)
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         reactBounds(touches: touches)
     }
     
@@ -67,7 +67,7 @@ class AssistiveTouch: UIButton {
         UIView.commitAnimations()
     }
     
-    override func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {
+    override open func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {
         addGestureRecognizer(UITapGestureRecognizer(target: target, action: action))
     }
 }
