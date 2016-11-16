@@ -43,4 +43,9 @@ class AssistiveTouch: UIButton {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
+    
+    override func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {
+        addGestureRecognizer(UITapGestureRecognizer(target: target, action: action))
+    }
+
 }
