@@ -103,10 +103,6 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resource_bundles = {
-  'AssistiveTouch' => ['AssistiveTouch/Resources/**/*.png']
-}
-
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -120,7 +116,5 @@ Pod::Spec.new do |s|
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
-  s.dependency "DeviceKit"
 
 end
