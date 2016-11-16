@@ -12,7 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = .green
+        let assistiveTouch = AssistiveTouch(frame: CGRect(x: 10, y: 100, width: 56, height: 56))
+        assistiveTouch.addTarget(self, action: #selector(tap(sender:)), for: .touchUpInside)
+        assistiveTouch.setImage(UIImage(named: "AsstisTouch"), for: .normal)
+        view.addSubview(assistiveTouch)
+    }
+    
+    func tap(sender: UIButton) {
+        print("\(sender) has been touched", "🌹")
     }
 
     override func didReceiveMemoryWarning() {
